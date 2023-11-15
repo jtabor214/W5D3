@@ -27,4 +27,10 @@ class Users
         SQL
         User.new(user.first)
     end
+
+    def initialize(options)
+        @id = options['id']
+        @fname = options['fname']
+        @lname = options['lname']
+    end
 end
