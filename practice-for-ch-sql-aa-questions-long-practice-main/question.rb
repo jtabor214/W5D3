@@ -36,4 +36,5 @@ class Question
         @author_id = options['author_id']
     end
 
+    
 end
