@@ -1,6 +1,9 @@
 class Question
 
-    require 'questions_database'
+    require_relative 'questions_database'
+    require_relative 'users'
+    require_relative 'reply'
+    require_relative 'question_follows'
 
     attr_accessor :title, :body, :author_id
     attr_reader :id
@@ -36,5 +39,5 @@ class Question
         @author_id = options['author_id']
     end
 
-    
+
 end
