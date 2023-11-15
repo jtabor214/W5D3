@@ -49,3 +49,48 @@ PRAGMA foreign_keys = ON;
         FOREIGN KEY (user_id) REFERENCES users(id),
         FOREIGN KEY (question_id) REFERENCES questions(id)
     );
+
+    INSERT INTO 
+    users (fname, lname)
+    VALUES
+        ('Ash', 'Ketchum'),
+        ('Thomas', 'Shelby'),
+        ('Diddy', 'Kong'),
+        ('Ishan', 'Chawla');
+    
+    INSERT INTO 
+    question (title, body, author_id)
+    VALUES 
+        ('Q1', 'Who''s that Pokemon?', 1)
+        ('Q2', 'Why am I with these people?', 2)
+        ('Q3', 'Banana?', 3)
+        ('Q4', 'Gggrreeeukiiee?', 3)
+        ('Q5', 'Were you tooo fast?', 4);
+
+    INSERT INTO 
+    question_follows (user_id, question_id)
+    VALUES 
+        (2, 1)
+        (1, 4)
+        (3, 3)
+        (4, 1)
+
+    INSERT INTO
+    replies (body, subject_question_id, user_id, parent_reply_id)
+    VALUES
+        ('It''s Bidoof!', 1, 4, NULL),
+        ('KAKAAKAA', 2, 3, NULL),
+        ('Banana?', 3, 2, NULL),
+        ('A new pokemon!', 4, 1, NULL),
+        ('Not fast enough', 5, 2, NULL);
+    
+    INSERT INTO 
+    question_likes (user_id, question_id)
+    VALUES
+        (5, 1),
+        (3, 3),
+        (1, 4);
+        
+
+
+    
